@@ -1,0 +1,16 @@
+# Loop untuk menghitung posisi setiap detik dan menyimpan hasilnya
+times = []
+positions = []
+for t in range(total_time + 1):  # Loop dari 0 hingga 20 detik
+    times.append(t)
+    positions.append(calculate_position(t))
+
+# Membuat grafik posisi terhadap waktu
+plt.figure(figsize=(10, 6))
+plt.plot(times, positions, label='Posisi terhadap Waktu', color='b', marker='o')
+plt.xlabel('Waktu (detik)')
+plt.ylabel('Posisi (meter)')
+plt.title('Grafik Posisi terhadap Waktu untuk Benda dengan Perlambatan Tetap')
+plt.grid(True)
+plt.legend()
+plt.show()
