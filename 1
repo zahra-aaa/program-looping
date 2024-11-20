@@ -1,0 +1,14 @@
+# Looping untuk menghitung posisi pada setiap detik
+for t in range(total_time + 1):
+    waktu_list.append(t)
+    posisi_list.append(posisi_benda(v, t))
+
+# Plot grafik posisi terhadap waktu
+plt.figure(figsize=(10, 6))
+plt.plot(waktu_list, posisi_list, label="Posisi (x) terhadap Waktu (t)", color="blue")
+plt.xlabel("Waktu (detik)")
+plt.ylabel("Posisi (meter)")
+plt.title("Grafik Posisi Terhadap Waktu untuk Gerak Lurus Beraturan")
+plt.legend()
+plt.grid()
+plt.show()
